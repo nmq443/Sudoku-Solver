@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor.U2D.Aseprite;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -183,5 +184,13 @@ public class GameManager : MonoBehaviour
 
     public void SolveButton() {
         ApplyAllSprites();
+    }
+
+    public void ResetButton() {
+        SceneManager.LoadScene("SampleScene");
+    }
+
+    public void QuitButton() {
+        Application.Quit();
     }
 }
